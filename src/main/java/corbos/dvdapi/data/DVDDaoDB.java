@@ -53,27 +53,39 @@ public class DVDDaoDB implements DVDDao{
 
     @Override
     public DVD findById(int id) {
-        return null;
+
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
+                + "FROM dvd WHERE DVDid = ?;";
+
+        return jdbcTemplate.queryForObject(sql, new DVDMapper(), id);
     }
 
     @Override
     public DVD findByTitle(String title) {
-        return null;
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
+                + "FROM dvd WHERE title = ?;";
+        return jdbcTemplate.queryForObject(sql, new DVDMapper(), title);
     }
 
     @Override
     public DVD findByReleaseYear(int year) {
-        return null;
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
+                + "FROM dvd WHERE year = ?;";
+        return jdbcTemplate.queryForObject(sql, new DVDMapper(), year);
     }
 
     @Override
     public DVD findByDirector(String director) {
-        return null;
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
+                + "FROM dvd WHERE director = ?;";
+        return jdbcTemplate.queryForObject(sql, new DVDMapper(), director);
     }
 
     @Override
     public DVD findByRating(String rating) {
-        return null;
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
+                + "FROM dvd WHERE rating = ?;";
+        return jdbcTemplate.queryForObject(sql, new DVDMapper(), rating);
     }
 
     @Override
