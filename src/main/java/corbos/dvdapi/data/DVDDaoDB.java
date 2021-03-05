@@ -70,7 +70,7 @@ public class DVDDaoDB implements DVDDao{
     @Override
     public DVD findByReleaseYear(int year) {
         final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
-                + "FROM dvd WHERE year = ?;";
+                + "FROM dvd WHERE releaseYear = ?;";
         return jdbcTemplate.queryForObject(sql, new DVDMapper(), year);
     }
 
