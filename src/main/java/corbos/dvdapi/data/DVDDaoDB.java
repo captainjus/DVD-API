@@ -78,13 +78,29 @@ public class DVDDaoDB implements DVDDao{
 
     @Override
     public boolean update(DVD dvd) {
-        return false;
+        final String sql = "UPDATE dvd SET "
+                + "title = ?"
+                + "year = ?"
+                + "director = ?"
+                + "rating = ?"
+                + "id = ?";
+
+        return jdbcTemplate.update(sql,
+                dvd.getTitle(),
+                dvd.getReleaseYear(),
+                dvd.getDirector(),
+                dvd.getRating(),
+                dvd.getDvdid()) > 0;
     }
 
     @Override
     public boolean deleteById(int id) {
-        return false;
+        final String sql = "DELETE FROM dvd WHERE id = ?";
+        return jdbcTemplate.update(sql, id) > 0;
     }
+
+
+
     private static final class DVDMapper implements RowMapper<DVD> {
 
         @Override
