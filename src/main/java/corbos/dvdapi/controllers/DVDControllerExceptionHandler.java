@@ -17,6 +17,9 @@ public class DVDControllerExceptionHandler extends ResponseEntityExceptionHandle
     private static final String CONSTRAINT_MESSAGE = "Could not save your item. "
             + "Please ensure it is valid and try again.";
 
+    private static final String MISSING_ITEM_MESSAGE = "Could not find your item. "
+            + "Please ensure it is valid and try again.";
+
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public final ResponseEntity<Error> handleSqlException(
             SQLIntegrityConstraintViolationException ex,
@@ -26,4 +29,15 @@ public class DVDControllerExceptionHandler extends ResponseEntityExceptionHandle
         err.setMessage(CONSTRAINT_MESSAGE);
         return new ResponseEntity<>(err, HttpStatus.UNPROCESSABLE_ENTITY);
     }
+
+    @ExceptionHandler(org.springframework.dao.EmptyResultDataAccessException.class)
+    public final ResponseEntity<Error> handleEmptyResultException(
+            org.springframework.dao.EmptyResultDataAccessException ex,
+            WebRequest request){
+
+            Error err = new Error();
+            err.setMessage(MISSING_ITEM_MESSAGE);
+            return new ResponseEntity<>(err, HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+
 }

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c3720ad-ee25-4c4d-805b-b446eed4bf52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/controllers/DVDControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/controllers/DVDControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
