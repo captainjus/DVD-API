@@ -3,11 +3,10 @@ package corbos.dvdapi.data;
 import corbos.dvdapi.models.DVD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 
 public class DVDDaoDB implements DVDDao{
@@ -30,6 +29,9 @@ public class DVDDaoDB implements DVDDao{
 
             statement.setString(1, dvd.getTitle());
             statement.setInt(2, dvd.getReleaseYear());
+            statement.setString(3, dvd.getDirector());
+            statement.setString(4, dvd.getRating());
+            statement.setString(5, dvd.getNotes());
             return statement;
 
         }, keyHolder);
@@ -41,7 +43,8 @@ public class DVDDaoDB implements DVDDao{
 
     @Override
     public List<DVD> getAll() {
-        return null;
+        final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes FROM dvd;";
+        return jdbcTemplate.query(sql, new DVDMapper());
     }
 
     @Override
@@ -77,5 +80,19 @@ public class DVDDaoDB implements DVDDao{
     @Override
     public boolean deleteById(int id) {
         return false;
+    }
+    private static final class DVDMapper implements RowMapper<DVD> {
+
+        @Override
+        public DVD mapRow(ResultSet rs, int index) throws SQLException {
+            DVD dvd = new DVD();
+           dvd.setDvdid(rs.getInt("DVDid"));
+           dvd.setTitle(rs.getString("title"));
+           dvd.setDirector(rs.getString("director"));
+           dvd.setReleaseYear(rs.getInt("releaseYear"));
+           dvd.setRating(rs.getString("rating"));
+           dvd.setNotes(rs.getString("notes"));
+            return dvd;
+        }
     }
 }
