@@ -91,11 +91,12 @@ public class DVDDaoDB implements DVDDao{
     @Override
     public boolean update(DVD dvd) {
         final String sql = "UPDATE dvd SET "
-                + "title = ?"
-                + "releaseYear = ?"
-                + "director = ?"
-                + "rating = ?"
-                + "DVDid = ?";
+                + "title = ?,"
+                + "releaseYear = ?,"
+                + "director = ?,"
+                + "rating = ?,"
+                + "notes = ? "
+                + "WHERE DVDid = ?";
 
         return jdbcTemplate.update(sql,
                 dvd.getTitle(),
