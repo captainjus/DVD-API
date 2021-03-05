@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f47d0c83-14e7-4e7d-b0f6-50133fdd1350" name="Default Changelist" comment="addJDBCDep" />
+    <list default="true" id="4c3720ad-ee25-4c4d-805b-b446eed4bf52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
