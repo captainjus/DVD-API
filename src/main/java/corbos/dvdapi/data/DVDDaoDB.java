@@ -61,41 +61,41 @@ public class DVDDaoDB implements DVDDao{
     }
 
     @Override
-    public DVD findByTitle(String title) {
+    public List<DVD> findByTitle(String title) {
         final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
                 + "FROM dvd WHERE title = ?;";
-        return jdbcTemplate.queryForObject(sql, new DVDMapper(), title);
+        return jdbcTemplate.query(sql, new DVDMapper(),title);
     }
 
     @Override
-    public DVD findByReleaseYear(int year) {
+    public List<DVD> findByReleaseYear(int year) {
         final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
                 + "FROM dvd WHERE releaseYear = ?;";
-        return jdbcTemplate.queryForObject(sql, new DVDMapper(), year);
+        return jdbcTemplate.query(sql, new DVDMapper(), year);
     }
 
     @Override
-    public DVD findByDirector(String director) {
+    public List<DVD> findByDirector(String director) {
         final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
                 + "FROM dvd WHERE director = ?;";
-        return jdbcTemplate.queryForObject(sql, new DVDMapper(), director);
+        return jdbcTemplate.query(sql, new DVDMapper(), director);
     }
 
     @Override
-    public DVD findByRating(String rating) {
+    public List<DVD> findByRating(String rating) {
         final String sql = "SELECT DVDid, title, releaseYear, director, rating, notes "
                 + "FROM dvd WHERE rating = ?;";
-        return jdbcTemplate.queryForObject(sql, new DVDMapper(), rating);
+        return jdbcTemplate.query(sql, new DVDMapper(), rating);
     }
 
     @Override
     public boolean update(DVD dvd) {
         final String sql = "UPDATE dvd SET "
                 + "title = ?"
-                + "year = ?"
+                + "releaseYear = ?"
                 + "director = ?"
                 + "rating = ?"
-                + "id = ?";
+                + "DVDid = ?";
 
         return jdbcTemplate.update(sql,
                 dvd.getTitle(),
@@ -107,7 +107,7 @@ public class DVDDaoDB implements DVDDao{
 
     @Override
     public boolean deleteById(int id) {
-        final String sql = "DELETE FROM dvd WHERE id = ?";
+        final String sql = "DELETE FROM dvd WHERE DVDid = ?";
         return jdbcTemplate.update(sql, id) > 0;
     }
 

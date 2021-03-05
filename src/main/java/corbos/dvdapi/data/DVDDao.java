@@ -10,10 +10,10 @@ public interface DVDDao {
     List<DVD> getAll();
 
     DVD findById(int id);
-    DVD findByTitle(String title);
-    DVD findByReleaseYear(int year);
-    DVD findByDirector(String director);
-    DVD findByRating(String rating);
+    List<DVD> findByTitle(String title);
+    List<DVD> findByReleaseYear(int year);
+    List<DVD> findByDirector(String director);
+    List<DVD> findByRating(String rating);
 
     // true if item exists and is updated
     boolean update(DVD dvd);
