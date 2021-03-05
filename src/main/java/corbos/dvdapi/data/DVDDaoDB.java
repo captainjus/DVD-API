@@ -2,13 +2,17 @@ package corbos.dvdapi.data;
 
 import corbos.dvdapi.models.DVD;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.List;
 
+@Repository //makes the class an injectable dependency
+@Profile("database")
 public class DVDDaoDB implements DVDDao{
     private final JdbcTemplate jdbcTemplate;
 

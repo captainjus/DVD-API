@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f47d0c83-14e7-4e7d-b0f6-50133fdd1350" name="Default Changelist" comment="addJDBCDep">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f47d0c83-14e7-4e7d-b0f6-50133fdd1350" name="Default Changelist" comment="getall and add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/controllers/DVDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/controllers/DVDController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1614886379784</updated>
     </task>
+    <task id="LOCAL-00001" summary="getall and add">
+      <created>1614970874206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614970874206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -100,5 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="getall and add" />
+    <option name="LAST_COMMIT_MESSAGE" value="getall and add" />
   </component>
 </project>
