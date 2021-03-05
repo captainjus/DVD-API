@@ -43,39 +43,27 @@ public class DVDController {
     }
 
     @GetMapping("/dvds/title/{title}")
-    public ResponseEntity<DVD> findByTitle(@PathVariable String title){
-        DVD res = dao.findByTitle(title);
-        if (res == null){
-            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(res);
+    public List<DVD> findByTitle(@PathVariable String title){
+       // List<DVD> res = dao.findByTitle(title);
+
+        return dao.findByTitle(title);
     }
 
     @GetMapping("/dvds/year/{releaseYear}")
-    public ResponseEntity<DVD> findByReleaseYear(@PathVariable int releaseYear){
-        DVD res = dao.findByReleaseYear(releaseYear);
-        if (res == null){
-            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(res);
+    public List<DVD> findByReleaseYear(@PathVariable int releaseYear){
+
+        return dao.findByReleaseYear(releaseYear);
     }
 
     @GetMapping("/dvds/director/{directorName}")
-    public ResponseEntity<DVD> findByDirectorName(@PathVariable String directorName){
-        DVD res = dao.findByDirector(directorName);
-        if (res == null){
-            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(res);
+    public List<DVD> findByDirectorName(@PathVariable String directorName){
+
+        return dao.findByDirector(directorName);
     }
 
     @GetMapping("/dvds/rating/{rating}")
-    public ResponseEntity<DVD> findByRating(@PathVariable String rating){
-        DVD res = dao.findByRating(rating);
-        if (res == null){
-            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok(res);
+    public List<DVD> findByRating(@PathVariable String rating){
+        return dao.findByRating(rating);
     }
 
     @PutMapping("/dvd/{id}")
