@@ -91,12 +91,12 @@ public class DVDDaoDB implements DVDDao{
     @Override
     public boolean update(DVD dvd) {
         final String sql = "UPDATE dvd SET "
-                + "title = ?"
-                + "year = ?"
-                + "director = ?"
-                + "rating = ?"
+                + "title = ?,"
+                + "year = ?,"
+                + "director = ?,"
+                + "rating = ?,"
                 + "notes = ?"
-                + "id = ?";
+                + "WHERE DVDid = ?;";
 
         return jdbcTemplate.update(sql,
                 dvd.getTitle(),
@@ -109,7 +109,7 @@ public class DVDDaoDB implements DVDDao{
 
     @Override
     public boolean deleteById(int id) {
-        final String sql = "DELETE FROM dvd WHERE id = ?";
+        final String sql = "DELETE FROM dvd WHERE DVDid = ?;";
         return jdbcTemplate.update(sql, id) > 0;
     }
 
