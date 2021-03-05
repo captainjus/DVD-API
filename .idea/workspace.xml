@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f47d0c83-14e7-4e7d-b0f6-50133fdd1350" name="Default Changelist" comment="Did update and deleteById methods in DVDDaoDB.java">
+    <list default="true" id="f47d0c83-14e7-4e7d-b0f6-50133fdd1350" name="Default Changelist" comment="Added pw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/corbos/dvdapi/data/DVDDaoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/corbos/dvdapi/data/DVDDaoDB.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/YasmineBranch" />
+    <option name="BRANCH" value="origin/ChadBranch" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -102,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614964200295</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added pw">
+      <created>1614966250894</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614966250894</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -132,6 +142,7 @@
     <MESSAGE value="Added .gitignore for branching" />
     <MESSAGE value="Created new branch - Justin Donayre" />
     <MESSAGE value="Did update and deleteById methods in DVDDaoDB.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did update and deleteById methods in DVDDaoDB.java" />
+    <MESSAGE value="Added pw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pw" />
   </component>
 </project>

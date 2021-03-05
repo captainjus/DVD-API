@@ -95,6 +95,7 @@ public class DVDDaoDB implements DVDDao{
                 + "year = ?"
                 + "director = ?"
                 + "rating = ?"
+                + "notes = ?"
                 + "id = ?";
 
         return jdbcTemplate.update(sql,
@@ -102,6 +103,7 @@ public class DVDDaoDB implements DVDDao{
                 dvd.getReleaseYear(),
                 dvd.getDirector(),
                 dvd.getRating(),
+                dvd.getNotes(),
                 dvd.getDvdid()) > 0;
     }
 
