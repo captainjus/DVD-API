@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 //Makes our class injectable. It will be injected into Spring MVC core dependents.
 //Tells Spring MVC to scan for methods that can handle HTTP requests.
